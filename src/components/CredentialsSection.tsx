@@ -21,8 +21,8 @@ const skills = [
 
 
 const memberships = [
-{ name: "Healthcare Businesswomen's Association", logo: hbaLogo },
 { name: "Women Applying AI", logo: womenApplyingAiLogo },
+{ name: "Healthcare Businesswomen's Association", logo: hbaLogo },
 { name: "Health Tech Nerds", logo: healthTechNerdsLogo },
 { name: "Women in Health Care Management", logo: whcmLogo },
 { name: "Project Management Institute", logo: pmiLogo }];
