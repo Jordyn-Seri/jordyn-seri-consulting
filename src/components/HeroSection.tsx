@@ -20,7 +20,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}>
             
             <span className="inline-block px-4 py-1.5 rounded-full bg-olive/10 text-sm font-semibold mb-6 tracking-wide text-olive">
-              Hands-On Independent Contractor
+              Hands-On Independent Consultant
             </span>
           </motion.div>
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Hands-on independent contractor supporting startups, clinics, and community-based healthcare organizations. Grounded in the realities of patient care and operational complexity, I use strategic thinking, automation, and artificial intelligence to solve your most pressing challenges.
+            Hands-on independent consultant supporting startups, clinics, and community-based healthcare organizations. Grounded in the realities of patient care and operational complexity, I use strategic thinking, automation, and artificial intelligence to solve your most pressing challenges.
           </motion.p>
 
           <motion.div
