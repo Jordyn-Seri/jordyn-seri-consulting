@@ -21,11 +21,11 @@ const skills = [
 
 
 const memberships = [
-{ name: "Project Management Institute", logo: pmiLogo },
+{ name: "Healthcare Businesswomen's Association", logo: hbaLogo },
 { name: "Women Applying AI", logo: womenApplyingAiLogo },
 { name: "Health Tech Nerds", logo: healthTechNerdsLogo },
 { name: "Women in Health Care Management", logo: whcmLogo },
-{ name: "Healthcare Businesswomen's Association", logo: hbaLogo }];
+{ name: "Project Management Institute", logo: pmiLogo }];
 
 
 const CredentialsSection = () => {
