@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Stethoscope, Rocket } from "lucide-react";
+import { Building2, Stethoscope, Rocket, Briefcase } from "lucide-react";
 
 const cards = [
 {
@@ -19,6 +19,12 @@ const cards = [
     title: "Community Orgs",
     description:
       "Collaborate with your teams to streamline existing processes so you can focus on your meaningful work."
+  },
+  {
+    icon: Briefcase,
+    title: "Consulting Firms",
+    description:
+      "Partner as a contract resource to extend your team's capacity across startup, clinic, and community-org engagements."
   }
 ];
 
@@ -57,7 +63,7 @@ const WhoIHelpSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           
           {cards.map((card) =>
           <motion.div
