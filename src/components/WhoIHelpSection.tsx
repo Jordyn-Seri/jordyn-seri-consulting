@@ -18,7 +18,7 @@ const cards = [
     icon: Building2,
     title: "Community Orgs",
     description:
-      "Collaborate with your teams to streamline existing processes so you can focus on your meaningful work."
+      "Collaborate as a dedicated resource to optimize internal processes and efficiency, ensuring your team’s energy and resources remain focused on your mission."
   },
   {
     icon: Briefcase,
