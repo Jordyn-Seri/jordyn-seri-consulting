@@ -6,7 +6,7 @@ const cards = [
   icon: Rocket,
   title: "Startups",
   description:
-  "Building scalable workflows and dashboards to turn customer insights into better products."
+  "Act as an adaptable resource to handle the \"in-the-weeds\" operational tasks, providing the extra bandwidth your team needs to stay agile and focused on growth."
 },
 {
   icon: Stethoscope,
