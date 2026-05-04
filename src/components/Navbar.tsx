@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useContactForm } from "@/contexts/ContactFormContext";
+import { openKoalendar } from "@/lib/koalendar";
 
 const navLinks = [
 { label: "Who I Help", href: "#who-i-help" },
@@ -16,7 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { openContactForm } = useContactForm();
+  
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -46,10 +46,8 @@ const Navbar = () => {
               {l.label}
             </a>
           )}
-          <Button asChild size="sm" className="rounded-full px-6 bg-olive">
-            <a href="https://koalendar.com/e/meet-with-jordyn" data-koalendar-widget data-koa-type="link">
-              Schedule a Consult
-            </a>
+          <Button size="sm" onClick={openKoalendar} className="rounded-full px-6 bg-olive">
+            Schedule a Consult
           </Button>
         </div>
 
@@ -76,15 +74,12 @@ const Navbar = () => {
               {l.label}
             </a>
         )}
-          <Button asChild size="sm" className="rounded-full px-6 mt-2 w-full bg-olive">
-            <a
-              href="https://koalendar.com/e/meet-with-jordyn"
-              data-koalendar-widget
-              data-koa-type="link"
-              onClick={() => setMobileOpen(false)}
-            >
-              Schedule a Consult
-            </a>
+          <Button
+            size="sm"
+            onClick={() => { setMobileOpen(false); openKoalendar(); }}
+            className="rounded-full px-6 mt-2 w-full bg-olive"
+          >
+            Schedule a Consult
           </Button>
         </div>
       }
