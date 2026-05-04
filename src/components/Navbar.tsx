@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useContactForm } from "@/contexts/ContactFormContext";
+import { openKoalendar } from "@/lib/koalendar";
 
 const navLinks = [
 { label: "Who I Help", href: "#who-i-help" },
