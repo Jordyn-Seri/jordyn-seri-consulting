@@ -16,7 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { openContactForm } = useContactForm();
+  
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
