@@ -48,8 +48,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-10 flex flex-wrap gap-4">
             
-            <Button size="lg" className="rounded-full px-8 text-base gap-2 bg-olive border border-secondary-foreground" onClick={openContactForm}>
+            <Button asChild size="lg" className="rounded-full px-8 text-base gap-2 bg-olive border border-secondary-foreground">
+              <a href="https://koalendar.com/e/meet-with-jordyn" data-koalendar-widget data-koa-type="link">
                 Schedule a Consult <ArrowRight size={18} />
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base border-secondary/20">
               <a href="#impact" className="bg-primary-foreground border border-secondary">See My Impact</a>
