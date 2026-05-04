@@ -74,15 +74,12 @@ const Navbar = () => {
               {l.label}
             </a>
         )}
-          <Button asChild size="sm" className="rounded-full px-6 mt-2 w-full bg-olive">
-            <a
-              href="https://koalendar.com/e/meet-with-jordyn"
-              data-koalendar-widget
-              data-koa-type="link"
-              onClick={() => setMobileOpen(false)}
-            >
-              Schedule a Consult
-            </a>
+          <Button
+            size="sm"
+            onClick={() => { setMobileOpen(false); openKoalendar(); }}
+            className="rounded-full px-6 mt-2 w-full bg-olive"
+          >
+            Schedule a Consult
           </Button>
         </div>
       }
