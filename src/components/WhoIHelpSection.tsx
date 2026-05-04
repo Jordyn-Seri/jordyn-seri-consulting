@@ -12,7 +12,7 @@ const cards = [
   icon: Stethoscope,
   title: "Clinics",
   description:
-  "Plan and implement automations for EHR documentation to reduce errors and improve value-based payment performance."
+  "Provide hands-on support to streamline operational complexities and administrative workflows, allowing your team to reclaim their time and focus on patient-centered care."
 },
   {
     icon: Building2,
