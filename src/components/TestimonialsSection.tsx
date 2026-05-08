@@ -8,12 +8,18 @@ const testimonials = [
     name: "Charles Moore",
     role: "CEO (Retired), HealthMETRICS Partners"
   },
-{
-  quote:
-  "I was struck by Jordyn's attention to detail and her ability to simplify complexity. She consistently bridged the communication gap between technical and business associates.\n\nOn a more personal note, working with Jordyn was a pleasure. She is consistently positive and genuine. I hope our professional paths will cross again!",
-  name: "Mark Swelstad",
-  role: "Application Support Manager"
-},
+  {
+    quote:
+      "Jordyn has become a real asset to Synchronyx, and that value shows in the quality of her work and the relationships she builds with our customers. What stands out most is how naturally she collaborates: she is receptive to feedback, easy to work with, and genuinely invested in the team's success. She is proactive about spotting opportunities, and has quickly become a reliable, well-integrated member of our team.",
+    name: "Tamar Sapir, PhD",
+    role: "CEO, Synchronyx"
+  },
+  {
+    quote:
+      "I was struck by Jordyn's attention to detail and her ability to simplify complexity. She consistently bridged the communication gap between technical and business associates.\n\nOn a more personal note, working with Jordyn was a pleasure. She is consistently positive and genuine. I hope our professional paths will cross again!",
+    name: "Mark Swelstad",
+    role: "Application Support Manager"
+  },
   {
     quote: "You should hire Jordyn because she will not just deliver on your project, but work with you to make it better. Her commitment to communicating not just the requirements, but the context, enabled us to deliver better designs and ultimately a better product.",
     name: "Alexander Wise",
