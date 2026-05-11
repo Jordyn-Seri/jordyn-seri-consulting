@@ -170,7 +170,7 @@ const ExperienceMapSection = () => (
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           I've been the patient advocate, the operator, and the strategist.
-          That's why I know where things break — and how to put them back
+          That's why I know where things break, and how to put them back
           together.
         </p>
       </motion.div>
