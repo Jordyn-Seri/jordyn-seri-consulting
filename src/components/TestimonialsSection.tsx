@@ -30,16 +30,29 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const goTo = (next: number, dir: number) => {
+    setDirection(dir);
+    setCurrent((next + testimonials.length) % testimonials.length);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      setDirection(1);
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 18000);
     return () => clearTimeout(timer);
   }, [current]);
 
-  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+  const prev = () => goTo(current - 1, -1);
+  const next = () => goTo(current + 1, 1);
+
+  const variants = {
+    enter: (dir: number) => ({ opacity: 0, x: dir * 40 }),
+    center: { opacity: 1, x: 0 },
+    exit: (dir: number) => ({ opacity: 0, x: dir * -40 }),
+  };
 
   return (
     <section id="testimonials" className="py-16 lg:py-20 bg-secondary">
@@ -60,12 +73,14 @@ const TestimonialsSection = () => {
         </motion.div>
 
         <div className="relative">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
               transition={{ duration: 0.4 }}
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
@@ -97,7 +112,7 @@ const TestimonialsSection = () => {
               {testimonials.map((_, i) =>
               <button
                 key={i}
-                onClick={() => setCurrent(i)}
+                onClick={() => goTo(i, i >= current ? 1 : -1)}
                 className={`w-2.5 h-2.5 rounded-full transition-colors ${
                 i === current ? "bg-primary" : "bg-secondary-foreground/20"}`
                 }
