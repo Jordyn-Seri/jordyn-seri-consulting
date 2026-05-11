@@ -67,7 +67,14 @@ const TestimonialsSection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.4 }}
-              className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 text-center border border-primary/10">
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -50 || info.velocity.x < -300) next();
+                else if (info.offset.x > 50 || info.velocity.x > 300) prev();
+              }}
+              className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 text-center border border-primary/10 touch-pan-y cursor-grab active:cursor-grabbing select-none">
               
               <Quote className="mx-auto mb-6 text-primary/40" size={40} />
               <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap">
