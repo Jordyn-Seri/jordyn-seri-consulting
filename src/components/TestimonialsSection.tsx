@@ -84,7 +84,9 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.4 }}
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
+              dragElastic={0.15}
+              dragMomentum={false}
+              dragTransition={{ bounceStiffness: 1000, bounceDamping: 60 }}
               onDragEnd={(_, info) => {
                 if (info.offset.x < -50 || info.velocity.x < -300) next();
                 else if (info.offset.x > 50 || info.velocity.x > 300) prev();
