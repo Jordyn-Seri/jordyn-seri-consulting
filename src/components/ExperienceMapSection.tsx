@@ -117,7 +117,7 @@ const DesktopTimeline = () => (
 );
 
 const MobileTimeline = () => (
-  <div className="lg:hidden relative max-w-md mx-auto pl-10">
+  <div className="lg:hidden relative max-w-md mx-auto pl-14">
     {/* Vertical gradient line */}
     <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-secondary/50 to-accent/50" />
 
@@ -134,8 +134,7 @@ const MobileTimeline = () => (
             className="relative"
           >
             <div
-              className={`absolute -left-10 top-0 w-10 h-10 rounded-full ${colors.icon} flex items-center justify-center`}
-              style={{ transform: "translateX(-50%)" }}
+              className={`absolute left-0 top-0 ml-5 -translate-x-1/2 w-10 h-10 rounded-full ${colors.icon} flex items-center justify-center`}
             >
               <node.icon size={18} />
             </div>
@@ -156,7 +155,7 @@ const MobileTimeline = () => (
 );
 
 const ExperienceMapSection = () => (
-  <section id="experience" className="py-16 lg:py-20 bg-card">
+  <section id="experience" className="py-16 lg:py-20 bg-card overflow-x-clip">
     <div className="container mx-auto px-4 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -1,20 +1,23 @@
-## Goal
-Stop the testimonial card from resizing as the user switches between slides. The container should reserve enough vertical space for the longest testimonial so all slides occupy the same height.
+## Problem
+On mobile, the page scrolls horizontally and the "Healthcare from Every Angle" section appears slightly cut off on the left.
 
-## Current behavior
-In `src/components/TestimonialsSection.tsx`, the `motion.div` card sizes itself to whatever testimonial is currently rendered. Because testimonials vary in length (Charles Moore and Tamar Sapir are long; Alexander Wise is short), the card visibly grows and shrinks during transitions.
+## Root cause
+In `src/components/ExperienceMapSection.tsx`, the `MobileTimeline` icon uses:
+```
+className="absolute -left-10 ..."
+style={{ transform: "translateX(-50%)" }}
+```
+That places the icon ~60px to the left of the timeline column. Combined with the section's `px-4` (16px) container padding, the icon overflows the viewport by ~44px on the smallest phones, creating page-wide horizontal scroll.
 
-## Approach
-Reserve a minimum height on the card's wrapper so it always matches the tallest testimonial. Use a responsive `min-h` that scales with breakpoint to avoid wasted whitespace on mobile.
+## Fix
+Edit `src/components/ExperienceMapSection.tsx` only:
 
-### Changes to `src/components/TestimonialsSection.tsx`
-1. On the `<div className="relative">` wrapper that contains the `AnimatePresence`, add `min-h-[...]` classes (responsive: smaller on mobile where the text wraps more). Approximate values: `min-h-[520px] sm:min-h-[460px] lg:min-h-[420px]`.
-2. Make the inner `motion.div` card stretch to fill: add `h-full` and use flex column with `justify-center` so short testimonials stay vertically centered inside the reserved space.
-3. Wrap the card in an absolutely-positioned layer (`absolute inset-0`) so the AnimatePresence transitions don't push the dot/arrow controls — the wrapper keeps the reserved height while the card swaps inside it.
+1. Rework `MobileTimeline` so the icon sits inside the column instead of overflowing left:
+   - Container: change `pl-10` → `pl-14` (room for the icon column).
+   - Vertical line: keep at `left-5` (centered under the icon).
+   - Icon: replace `absolute -left-10 top-0 ... translateX(-50%)` with `absolute left-0 top-0 -translate-x-1/2 ml-5` so the icon centers on the line at `left:5` without crossing the section's left edge.
+   - Drop the now-unused `style={{ transform }}` (use Tailwind `-translate-x-1/2`).
 
-### Result
-- Card height is constant across all slides.
-- Short testimonials are centered in the reserved space; long ones still fit.
-- Arrow buttons and dots stay in a fixed position below the card.
+2. Belt-and-suspenders: add `overflow-x-clip` to the `<section>` wrapper in `ExperienceMapSection` so any future stray overflow inside this section can't bleed out and cause page-level horizontal scrolling.
 
-No other files change. No new dependencies.
+No other files change. No new dependencies. Desktop layout is untouched.
