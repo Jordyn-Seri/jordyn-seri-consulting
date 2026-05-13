@@ -6,7 +6,7 @@ const testimonials = [
   {
     quote: "Jordyn has an exceptional ability to manage details without losing sight of the broader objectives. She consistently anticipated potential challenges and proposed solutions well before risks became apparent to others.\n\nIn addition to being conscientious, diligent, hardworking, and highly intelligent, Jordyn is a genuine pleasure to work with. I would not hesitate to hire her again and would do so enthusiastically given the opportunity.",
     name: "Charles Moore",
-    role: "CEO (Retired), HealthMETRICS Partners"
+    role: "CEO, HealthMETRICS Partners (Retired)"
   },
   {
     quote:
