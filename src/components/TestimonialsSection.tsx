@@ -73,34 +73,36 @@ const TestimonialsSection = () => {
         </motion.div>
 
         <div className="relative">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={current}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.15}
-              dragMomentum={false}
-              dragTransition={{ bounceStiffness: 1000, bounceDamping: 60 }}
-              onDragEnd={(_, info) => {
-                if (info.offset.x < -50 || info.velocity.x < -300) next();
-                else if (info.offset.x > 50 || info.velocity.x > 300) prev();
-              }}
-              className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 text-center border border-primary/10 touch-pan-y cursor-grab active:cursor-grabbing select-none">
-              
-              <Quote className="mx-auto mb-6 text-primary/40" size={40} />
-              <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap">
-                "{testimonials[current].quote}"
-              </blockquote>
-              <p className="font-bold text-secondary-foreground">{testimonials[current].name}</p>
-              <p className="text-sm text-primary">{testimonials[current].role}</p>
-            </motion.div>
-          </AnimatePresence>
+          <div className="relative min-h-[640px] sm:min-h-[520px] lg:min-h-[460px]">
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={current}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.4 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.15}
+                dragMomentum={false}
+                dragTransition={{ bounceStiffness: 1000, bounceDamping: 60 }}
+                onDragEnd={(_, info) => {
+                  if (info.offset.x < -50 || info.velocity.x < -300) next();
+                  else if (info.offset.x > 50 || info.velocity.x > 300) prev();
+                }}
+                className="absolute inset-0 bg-card/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 text-center border border-primary/10 touch-pan-y cursor-grab active:cursor-grabbing select-none flex flex-col justify-center">
+                
+                <Quote className="mx-auto mb-6 text-primary/40" size={40} />
+                <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap">
+                  "{testimonials[current].quote}"
+                </blockquote>
+                <p className="font-bold text-secondary-foreground">{testimonials[current].name}</p>
+                <p className="text-sm text-primary">{testimonials[current].role}</p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           <div className="flex justify-center items-center gap-4 mt-8">
             <button
