@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
                 
                 <Quote className="mx-auto mb-6 text-primary/40" size={40} />
                 <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap text-justify">
-                  "{testimonials[current].quote}"
+                  {testimonials[current].quote}
                 </blockquote>
                 <p className="font-bold text-secondary-foreground">{testimonials[current].name}</p>
                 <p className="text-sm text-primary">{testimonials[current].role}</p>
