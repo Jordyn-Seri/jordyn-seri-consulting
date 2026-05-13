@@ -23,7 +23,7 @@ const testimonials = [
   {
     quote: "Jordyn always followed through on what she said, every single time! I could trust that she understood program needs as well as the technical side, so I didn't need to be in the \"weeds\" of things very often. She was efficient and thorough, kept solid communication about timelines and progress, and was proactive in driving projects forward. Jordyn will see your project through!",
     name: "Elyse Dalal-Asfha",
-    role: "Director of Behavioral Health Community Partners, Boston Health Care for the Homeless Program"
+    role: "Director of Case Management"
   },
   {
     quote: "You should hire Jordyn because she will not just deliver on your project, but work with you to make it better. Her commitment to communicating not just the requirements, but the context, enabled us to deliver better designs and ultimately a better product.",
