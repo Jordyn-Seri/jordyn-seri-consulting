@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
                 className="absolute inset-0 bg-card/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 text-center border border-primary/10 touch-pan-y cursor-grab active:cursor-grabbing select-none flex flex-col justify-center">
                 
                 <Quote className="mx-auto mb-6 text-primary/40" size={40} />
-                <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap">
+                <blockquote className="text-lg sm:text-xl text-secondary-foreground/90 leading-relaxed italic mb-8 whitespace-pre-wrap text-justify">
                   "{testimonials[current].quote}"
                 </blockquote>
                 <p className="font-bold text-secondary-foreground">{testimonials[current].name}</p>
