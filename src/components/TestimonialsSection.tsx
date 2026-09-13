@@ -37,25 +37,22 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isScrollingRef = useRef(false);
 
-  const goTo = (next: number, dir: number) => {
-    const normalized = (next + testimonials.length) % testimonials.length;
-    setDirection(dir);
-    setCurrent(normalized);
+  const goTo = (next: number) => {
+    setCurrent((next + testimonials.length) % testimonials.length);
   };
 
-  const prev = () => goTo(current - 1, -1);
-  const next = () => goTo(current + 1, 1);
+  const prev = () => goTo(current - 1);
+  const next = () => goTo(current + 1);
 
   useEffect(() => {
     if (isPaused) return;
     const timer = setTimeout(() => {
-      goTo(current + 1, 1);
+      goTo(current + 1);
     }, 18000);
     return () => clearTimeout(timer);
   }, [current, isPaused]);
@@ -93,7 +90,6 @@ const TestimonialsSection = () => {
     });
 
     if (closest !== current) {
-      setDirection(closest > current ? 1 : -1);
       setCurrent(closest);
     }
   };
