@@ -13,7 +13,8 @@ In `src/components/TestimonialsSection.tsx` only:
 
 1. **Section background**
    - Replace `bg-secondary` with `bg-background`.
-   - Add a subtle top/bottom gradient divider if needed so the hard edge against neighboring sections is softened (the user wants the testimonials section to keep its stark lines, so keep transitions crisp).
+   - Add a subtle gradient accent behind the carousel using the site's accent colors (lime → teal → cyan), similar to the gradient line in the Experience section — e.g. large blurred radial orbs or a soft linear wash — so the dark section isn't flat.
+   - Keep transitions crisp; no heavy dividers that look like a separate band.
 
 2. **Card styling**
    - Convert the single absolute card into a horizontally scrollable/snap row of glass cards.
