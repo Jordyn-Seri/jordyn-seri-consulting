@@ -1,23 +1,45 @@
-## Problem
-On mobile, the page scrolls horizontally and the "Healthcare from Every Angle" section appears slightly cut off on the left.
+## Redesign the Testimonials section
 
-## Root cause
-In `src/components/ExperienceMapSection.tsx`, the `MobileTimeline` icon uses:
-```
-className="absolute -left-10 ..."
-style={{ transform: "translateX(-50%)" }}
-```
-That places the icon ~60px to the left of the timeline column. Combined with the section's `px-4` (16px) container padding, the icon overflows the viewport by ~44px on the smallest phones, creating page-wide horizontal scroll.
+Make the "What Others Say" section look cooler and more cohesive with the rest of the site while keeping all current behavior.
 
-## Fix
-Edit `src/components/ExperienceMapSection.tsx` only:
+### Design direction (locked from your picks)
+- **Background:** dark midnight (`bg-background`, #111827) so the section matches the surrounding dark theme instead of the current teal block.
+- **Cards:** glassmorphism — translucent dark card (`bg-card/40` or similar), `backdrop-blur-xl`, thin `border-primary/20`, lime quote mark and active accents.
+- **Layout:** stacked horizontal carousel. Cards sit in a row, the active card is centered/full, adjacent cards peek at the edges, and the row snaps to each card. Keep the previous/next arrows and dot indicators below.
+- **Typography:** Inter everywhere, no serifs. Quote text stays large and readable; drop the justified/italic wall-of-text feel for a cleaner left-aligned or centered quote.
 
-1. Rework `MobileTimeline` so the icon sits inside the column instead of overflowing left:
-   - Container: change `pl-10` → `pl-14` (room for the icon column).
-   - Vertical line: keep at `left-5` (centered under the icon).
-   - Icon: replace `absolute -left-10 top-0 ... translateX(-50%)` with `absolute left-0 top-0 -translate-x-1/2 ml-5` so the icon centers on the line at `left:5` without crossing the section's left edge.
-   - Drop the now-unused `style={{ transform }}` (use Tailwind `-translate-x-1/2`).
+### What changes
+In `src/components/TestimonialsSection.tsx` only:
 
-2. Belt-and-suspenders: add `overflow-x-clip` to the `<section>` wrapper in `ExperienceMapSection` so any future stray overflow inside this section can't bleed out and cause page-level horizontal scrolling.
+1. **Section background**
+   - Replace `bg-secondary` with `bg-background`.
+   - Add a subtle top/bottom gradient divider if needed so the hard edge against neighboring sections is softened (the user wants the testimonials section to keep its stark lines, so keep transitions crisp).
 
-No other files change. No new dependencies. Desktop layout is untouched.
+2. **Card styling**
+   - Convert the single absolute card into a horizontally scrollable/snap row of glass cards.
+   - Each card: `bg-card/40 backdrop-blur-xl border border-primary/20 rounded-2xl p-8 sm:p-12 shadow-lg`.
+   - Large lime quote icon (`Quote` from lucide-react) at top, but more subtle (e.g. `text-primary/30`).
+   - Name and role centered or left-aligned with lime role text.
+
+3. **Layout / carousel**
+   - Render all testimonials in a flex row with `overflow-x-auto snap-x snap-mandatory` and hide the scrollbar.
+   - Each card is `flex-shrink-0 w-full md:w-[85%] lg:w-[70%]` so neighboring cards peek in on larger screens.
+   - Center the active card using scroll-snap.
+   - Keep the existing previous/next buttons; make them scroll the container by one card width instead of swapping React state.
+   - Keep dot indicators; clicking a dot scrolls to that card.
+
+4. **Preserve existing behavior**
+   - 18-second auto-advance timer (pause while user is interacting/hovering optional but preferred).
+   - Swipe/drag to change slides.
+   - Direction-aware slide animation (backward motion aligns visually).
+   - Static section/card height so content doesn't resize between slides.
+   - `aria-label`s and keyboard focus remain intact.
+
+5. **Responsive**
+   - Mobile: full-width cards, swipe is primary navigation.
+   - Desktop: peeking adjacent cards, arrows and dots still visible.
+
+### Out of scope
+- No new dependencies.
+- No changes to testimonial copy or timing.
+- No changes to other sections or the navbar.
