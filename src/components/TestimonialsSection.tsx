@@ -158,17 +158,17 @@ const TestimonialsSection = () => {
                 }`}
               >
                 <Quote
-                  className="mx-auto mb-6 text-primary/30"
+                  className="mb-6 text-primary/30"
                   size={48}
                   strokeWidth={1.5}
                 />
-                <blockquote className="text-lg sm:text-xl text-foreground/90 leading-relaxed mb-8 whitespace-pre-wrap text-center">
+                <blockquote className="text-lg sm:text-xl text-foreground/90 leading-relaxed mb-8 whitespace-pre-wrap text-left text-pretty">
                   {t.quote}
                 </blockquote>
-                <p className="font-bold text-foreground text-center">
+                <p className="font-bold text-foreground">
                   {t.name}
                 </p>
-                <p className="text-sm text-primary text-center mt-1">
+                <p className="text-sm text-primary mt-1">
                   {t.role}
                 </p>
               </motion.div>
