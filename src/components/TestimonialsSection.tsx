@@ -190,7 +190,7 @@ const TestimonialsSection = () => {
             {testimonials.map((_, i) => (
               <button
                 key={i}
-                onClick={() => goTo(i, i >= current ? 1 : -1)}
+                onClick={() => goTo(i)}
                 className={`w-2.5 h-2.5 rounded-full transition-colors ${
                   i === current ? "bg-primary" : "bg-foreground/20"
                 }`}
