@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="flex items-stretch overflow-x-auto snap-x snap-mandatory scroll-smooth gap-6 py-4"
+          className="flex items-stretch overflow-x-auto snap-x snap-mandatory scroll-smooth gap-12 sm:gap-16 py-6"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <div className="shrink-0 w-[7.5vw]" aria-hidden="true" />
@@ -153,8 +153,8 @@ const TestimonialsSection = () => {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className={`snap-center shrink-0 w-[85vw] max-w-3xl min-h-[640px] sm:min-h-[540px] lg:min-h-[480px] rounded-2xl p-8 sm:p-12 flex flex-col justify-center transition-all duration-500 ${
                   isActive
-                    ? "bg-card/50 backdrop-blur-xl border border-primary/30 shadow-2xl shadow-primary/5 scale-100"
-                    : "bg-card/30 backdrop-blur-md border border-primary/10 opacity-70 scale-[0.97]"
+                    ? "bg-card/50 backdrop-blur-xl border border-primary/30 shadow-[0_0_60px_0px_rgba(163,230,53,0.10)] scale-100"
+                    : "bg-card/30 backdrop-blur-md border border-primary/10 shadow-[0_0_40px_0px_rgba(163,230,53,0.05)] opacity-70 scale-[0.97]"
                 }`}
               >
                 <Quote
