@@ -86,11 +86,11 @@ const ServicesSection = () => {
           <p className="text-muted-foreground leading-relaxed text-lg">
             For all of my services, working together follows the same proven approach:
           </p>
-          <div className="flex items-center justify-center gap-3 mt-4 mb-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mt-4 mb-6 px-4">
             {["Assess", "Strategize", "Implement"].map((step, i) => (
-              <div key={step} className="flex items-center gap-3">
-                <span className="font-bold text-primary text-xl">{step}</span>
-                {i < 2 && <span className="text-muted-foreground text-xl">→</span>}
+              <div key={step} className="flex items-center gap-2 sm:gap-3">
+                <span className="font-bold text-primary text-lg sm:text-xl">{step}</span>
+                {i < 2 && <span className="text-muted-foreground text-lg sm:text-xl">→</span>}
               </div>
             ))}
           </div>
