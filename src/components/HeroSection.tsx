@@ -29,7 +29,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-secondary tracking-tight">
             
-            I develop responsive, targeted solutions.{" "}
+            I develop targeted solutions.{" "}
             <span className="text-olive">You focus on the work that matters.</span>
           </motion.h1>
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Hands-on independent consultant supporting startups, clinics, and community-based healthcare organizations. Grounded in the realities of patient care and operational complexity, I use strategic thinking, automation, and artificial intelligence to solve your most pressing challenges.
+            Hands-on independent consultant supporting startups, clinics, and community-based organizations. Grounded in the realities of patient care and operational complexity, I use strategic thinking, automation, and artificial intelligence to solve your most pressing challenges.
           </motion.p>
 
           <motion.div
