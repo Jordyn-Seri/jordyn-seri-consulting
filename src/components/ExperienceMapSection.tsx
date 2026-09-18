@@ -117,9 +117,9 @@ const DesktopTimeline = () => (
 );
 
 const MobileTimeline = () => (
-  <div className="lg:hidden relative max-w-md mx-auto pl-14">
-    {/* Vertical gradient line */}
-    <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-secondary/50 to-accent/50" />
+  <div className="lg:hidden relative max-w-md mx-auto">
+    {/* Vertical gradient line aligned to the icon centers */}
+    <div className="absolute left-5 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary/50 via-secondary/50 to-accent/50" />
 
     <div className="space-y-10">
       {nodes.map((node, i) => {
@@ -131,16 +131,16 @@ const MobileTimeline = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="relative"
+            className="relative flex items-start gap-4"
           >
             <div
-              className={`absolute left-0 top-0 ml-5 -translate-x-1/2 w-10 h-10 rounded-full ${colors.icon} flex items-center justify-center`}
+              className={`relative z-10 w-10 h-10 shrink-0 rounded-full ${colors.icon} flex items-center justify-center`}
             >
               <node.icon size={18} />
             </div>
 
-            <div className="ml-2">
-              <h4 className="font-semibold text-foreground text-sm leading-tight mb-1">
+            <div className="min-w-0 flex-1 pt-1">
+              <h4 className="font-semibold text-foreground text-base leading-tight mb-1">
                 {node.title}
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">

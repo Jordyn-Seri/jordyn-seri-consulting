@@ -59,10 +59,15 @@ const TestimonialsSection = () => {
 
   useEffect(() => {
     const card = cardRefs.current[current];
-    if (!card || !containerRef.current) return;
+    const container = containerRef.current;
+    if (!card || !container) return;
 
     isScrollingRef.current = true;
-    card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    // Scroll the carousel horizontally only — never move the page vertically.
+    const left =
+      card.offsetLeft - (container.clientWidth - card.offsetWidth) / 2;
+    container.scrollTo({ left, behavior: "smooth" });
+
 
     const timeout = setTimeout(() => {
       isScrollingRef.current = false;
