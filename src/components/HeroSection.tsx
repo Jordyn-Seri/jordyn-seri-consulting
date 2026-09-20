@@ -36,15 +36,6 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.22 }}
-            className="mt-4 text-sm sm:text-base font-semibold uppercase tracking-[0.2em] text-olive">
-            
-            Mission-Driven. Outcome-Focused.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-5 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Hands-on independent consultant supporting startups, clinics, and community-based organizations. Grounded in the realities of patient care and operational complexity, I use strategic thinking, automation, and artificial intelligence to solve your most pressing challenges.
