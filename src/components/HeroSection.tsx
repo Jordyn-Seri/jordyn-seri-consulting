@@ -19,7 +19,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}>
             
             <span className="inline-block px-4 py-1.5 rounded-full bg-olive/10 text-sm font-semibold mb-6 tracking-wide text-olive">
-              Hands-On Independent Consultant
+              Mission-driven. Outcome-focused.
             </span>
           </motion.div>
 
@@ -32,15 +32,6 @@ const HeroSection = () => {
             I develop targeted solutions.{" "}
             <span className="text-olive">You focus on the work that matters.</span>
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.22 }}
-            className="mt-4 text-sm sm:text-base font-semibold uppercase tracking-[0.2em] text-olive">
-            
-            Mission-Driven. Outcome-Focused.
-          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
