@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ArrowUpRight } from "lucide-react";
-import influentialWomenBadge from "@/assets/influential-women-verified.png.asset.json";
-import pmpBadge from "@/assets/pmp-certification.png.asset.json";
+import influentialWomenBadge from "@/assets/influential-women-verified.png";
+import pmpBadge from "@/assets/pmp-certification.png";
 import womenApplyingAiLogo from "@/assets/women-applying-ai.png";
 import healthTechNerdsLogo from "@/assets/health-tech-nerds.png";
 import whcmLogo from "@/assets/whcm.png";
@@ -15,13 +15,13 @@ const badges = [
   {
     name: "Project Management Professional",
     label: "PMP Certification",
-    image: pmpBadge.url,
+    image: pmpBadge,
     href: "https://www.credly.com/badges/108a9151-a612-41ec-8363-cd9baab673da/public_url",
   },
   {
     name: "Influential Women Verified",
     label: "Influential Women",
-    image: influentialWomenBadge.url,
+    image: influentialWomenBadge,
     href: "https://influentialwomen.com/profile/jordyn-seri",
   },
 ];
