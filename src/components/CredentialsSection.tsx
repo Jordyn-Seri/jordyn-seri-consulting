@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ArrowUpRight } from "lucide-react";
-import influentialWomenBadge from "@/assets/influential-women-verified.png.asset.json";
-import pmpBadge from "@/assets/pmp-certification.png.asset.json";
+import influentialWomenBadge from "@/assets/influential-women-verified.png";
+import pmpBadge from "@/assets/pmp-certification.png";
 import womenApplyingAiLogo from "@/assets/women-applying-ai.png";
 import healthTechNerdsLogo from "@/assets/health-tech-nerds.png";
 import whcmLogo from "@/assets/whcm.png";
