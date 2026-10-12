@@ -15,13 +15,13 @@ const badges = [
   {
     name: "Project Management Professional",
     label: "PMP Certification",
-    image: pmpBadge.url,
+    image: pmpBadge,
     href: "https://www.credly.com/badges/108a9151-a612-41ec-8363-cd9baab673da/public_url",
   },
   {
     name: "Influential Women Verified",
     label: "Influential Women",
-    image: influentialWomenBadge.url,
+    image: influentialWomenBadge,
     href: "https://influentialwomen.com/profile/jordyn-seri",
   },
 ];
