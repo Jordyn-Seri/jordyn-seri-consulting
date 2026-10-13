@@ -118,7 +118,7 @@ const CredentialsSection = () => {
                   <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-white p-1">
                     <img src={m.logo} alt={m.name} className="w-full h-full object-contain" />
                   </div>
-                  <span className="text-lg font-semibold leading-tight text-secondary">{m.name}</span>
+                  <span className="text-base sm:text-lg font-semibold leading-tight text-secondary">{m.name}</span>
                 </div>
               )}
             </div>
