@@ -132,7 +132,7 @@ const CredentialsSection = () => {
             transition={{ duration: 0.6 }}>
             
             <h3 className="font-bold text-secondary mb-6 text-xl">Featured Video</h3>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-10">
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-6">
               <iframe
                 src="https://www.youtube.com/embed/wVxn60tBu4c"
                 title="Jordyn Seri - Featured Video"
