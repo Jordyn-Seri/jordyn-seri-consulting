@@ -142,6 +142,17 @@ const CredentialsSection = () => {
               
             </div>
 
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-10">
+              <iframe
+                src="https://player.vimeo.com/video/1235215422?h=3c8d96fb29"
+                title="Jordyn Seri - Featured Video (Vimeo)"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowFullScreen
+                className="w-full h-full" />
+              
+            </div>
+
             <h3 className="font-bold text-secondary mb-6 text-xl">Core Skills</h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) =>
