@@ -132,11 +132,22 @@ const CredentialsSection = () => {
             transition={{ duration: 0.6 }}>
             
             <h3 className="font-bold text-secondary mb-6 text-xl">Featured Video</h3>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-10">
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-6">
               <iframe
                 src="https://www.youtube.com/embed/wVxn60tBu4c"
                 title="Jordyn Seri - Featured Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full" />
+              
+            </div>
+
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-lg mb-10">
+              <iframe
+                src="https://player.vimeo.com/video/1235215422?h=3c8d96fb29"
+                title="Jordyn Seri - Featured Video (Vimeo)"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 allowFullScreen
                 className="w-full h-full" />
               
