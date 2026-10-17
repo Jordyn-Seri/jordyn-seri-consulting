@@ -23,6 +23,12 @@ const testimonials = [
   },
   {
     quote:
+      "Jordyn was known at the Medicaid program as an outstanding detective, who could figure out the origins of problems, and assist in resolving them. She frequently found glitches in our state systems that she brought to our attention and we were able to resolve, mitigating problems for our other providers and saving a lot of time and money. She is a smart and gifted Project Manager who has excellent communication skills and an ability to quickly grasp what is needed for a project. I can recommend her highly and without reservation.",
+    name: "Debbie Kaegebein, PhD",
+    role: "Program Manager, MassHealth (Retired)",
+  },
+  {
+    quote:
       "Jordyn always followed through on what she said, every single time! I could trust that she understood program needs as well as the technical side, so I didn't need to be in the \"weeds\" of things very often. She was efficient and thorough, kept solid communication about timelines and progress, and was proactive in driving projects forward. Jordyn will see your project through!",
     name: "Elyse Dalal-Asfha",
     role: "Director of Case Management",
