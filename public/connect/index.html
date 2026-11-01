@@ -18,6 +18,7 @@
     --bg-teal: #0f4658;
     --teal: #14b8a6;
     --lime: #a3e635;
+    --cyan: #06b6d4;
     --lime-dark: #8fd01f;
     --text: #e6edf5;
     --muted: #8a9bb3;
@@ -73,10 +74,11 @@
   a.primary {
     background: linear-gradient(90deg, var(--teal), var(--lime));
     color: #0b1426;
-    padding: 20px 16px;
-    font-size: 19px;
-    font-weight: 800;
-    margin-bottom: 14px;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1.5px solid transparent;
+    margin-bottom: 10px;
   }
   a.primary:hover { filter: brightness(1.08); }
   .secondary-group { display: grid; gap: 10px; }
@@ -87,7 +89,14 @@
     padding: 14px 16px;
     font-size: 16px;
   }
-  a.secondary:hover { border-color: var(--lime); }
+  .secondary-group .secondary:nth-child(1) { color: #9ee633; border-color: #9ee6338c; }
+  .secondary-group .secondary:nth-child(1):hover { border-color: #9ee633; }
+  .secondary-group .secondary:nth-child(2) { color: #42c77f; border-color: #42c77f8c; }
+  .secondary-group .secondary:nth-child(2):hover { border-color: #42c77f; }
+  .secondary-group .secondary:nth-child(3) { color: #10b7b5; border-color: #10b7b58c; }
+  .secondary-group .secondary:nth-child(3):hover { border-color: #10b7b5; }
+  .secondary-group .secondary:nth-child(4) { color: #07b6d5; border-color: #07b6d58c; }
+  .secondary-group .secondary:nth-child(4):hover { border-color: #07b6d5; }
   .foot { margin: 28px 0 0; font-size: 17px; color: var(--muted); }
 </style>
 </head>
@@ -100,8 +109,9 @@
     <a class="btn primary" href="https://www.linkedin.com/in/jordynseri">Connect on LinkedIn</a>
 
     <div class="secondary-group">
+      <a class="btn secondary" href="https://koalendar.com/e/meet-with-jordyn-apha">Book time to chat during APHA</a>
+      <a class="btn secondary" href="https://koalendar.com/e/chat-with-jordyn">Book time to chat after the conference</a>
       <a class="btn secondary" href="https://jordynsericonsulting.com">Visit my website</a>
-      <a class="btn secondary" href="https://koalendar.com/e/meet-with-jordyn-lets-chat">Schedule time to chat</a>
       <a class="btn secondary" href="mailto:hello@jordynseri.com">Email me at hello@jordynseri.com</a>
     </div>
 
